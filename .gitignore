@@ -1,8 +1,6 @@
-## Compiled PDF
-MainProbsNotesCombinatorics.pdf
-
-## Output files
-output
+_site/
+.sass-cache/
+.directory
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
