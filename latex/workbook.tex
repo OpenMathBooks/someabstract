@@ -1,8 +1,9 @@
-\documentclass[12pt, fleqn, oneside]{book}
+\documentclass[12pt, fleqn, twoside]{book}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{multicol}
-\usepackage{amsmath}
+\usepackage{amsthm, amsmath}
+\usepackage{amsfonts}
 \usepackage{ifthen}
 \usepackage[margin=.75in,bindingoffset=.5in]{geometry}
 \usepackage{color}
@@ -22,8 +23,13 @@
   % \ifodd\value{page}\origheadrule\else\relax\fi}
 \def\chaptermark{}
 
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+   \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
 \begin{document}
-\setcounter{page}{51}
+\setcounter{page}{86}
 
 \setlength{\parindent}{0in}
 
@@ -187,7 +193,7 @@ $$\begin{array}{c|cccc}
 %
 %
 
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -206,33 +212,33 @@ How about under multiplication?\\[1.25in]
 Under subtraction?\\[1.25in]
 Under multiplication?%
 %
-\clearpage%
+\cleardoublepage%
 %
-\underline{\bf{Task 3}} Is the set of all rational numbers of the form $2^m3^n$, where $m,n \in Z$, closed under multiplication?\\[1.5in]
+\underline{\bf{Task 3}} Is the set of all rational numbers of the form $2^m3^n$, where $m,n \in \mathbb{Z}$, closed under multiplication?\\[1.5in]
 \underline{\bf{Task 4}} Is the set of all positive rational numbers closed under addition?  Multiplication?\\[1.5in]
 \underline{\bf{Task 5}} Are the complex numbers of the form $m+ni$ where $m$ and $n$ are integers closed under multiplication?\\[1.5in]
-\underline{\bf{Task 6}} Is the set $\{m+n\sqrt{2}: m, n\in Z\}$ closed under multiplication?\\[1.5in]
+\underline{\bf{Task 6}} Is the set $\{m+n\sqrt{2}: m, n\in \mathbb{Z}\}$ closed under multiplication?\\[1.5in]
 \underline{\bf{Task 7}} Are the irrationals closed under multiplication? Under subtraction?
 %
 %
 %
-\clearpage%
+\cleardoublepage%
 %
 %
 %
 {\large \bf WORKSHEET ON CLOSURE II}\\[.25in]
-Let $Z=\{\dots, -2, -1, 0, 1, 2, \dots\}$\\
-QUESTION: Which of the sets $3Z,\, 1+3Z,\,2+3Z$ are closed under subtraction?\\[.25in]
-\underline{\bf{Task 1}} List the elements of $3Z$; choose two and subtract them.\\[1.25in]
-\underline{\bf{Task 2}} What does it mean to say $3Z$ is closed under subtraction?\\[1.25in]
-\underline{\bf{Task 3}} Is $3Z$ closed under subtraction?  If yes, prove it.\\[1.25in]
-\underline{\bf{Task 4}} Is $1+3Z$ closed under subtraction?\\[1.25in]
-\underline{\bf{Task 5}} Is $2+3Z$ closed under subtraction?\\[1.25in]
+Let $\mathbb{Z}=\{\dots, -2, -1, 0, 1, 2, \dots\}$\\
+QUESTION: Which of the sets $3\mathbb{Z},\, 1+3\mathbb{Z},\,2+3\mathbb{Z}$ are closed under subtraction?\\[.25in]
+\underline{\bf{Task 1}} List the elements of $3\mathbb{Z}$; choose two and subtract them.\\[1.25in]
+\underline{\bf{Task 2}} What does it mean to say $3\mathbb{Z}$ is closed under subtraction?\\[1.25in]
+\underline{\bf{Task 3}} Is $3\mathbb{Z}$ closed under subtraction?  If yes, prove it.\\[1.25in]
+\underline{\bf{Task 4}} Is $1+3\mathbb{Z}$ closed under subtraction?\\[1.25in]
+\underline{\bf{Task 5}} Is $2+3\mathbb{Z}$ closed under subtraction?\\[1.25in]
 \underline{\bf{Task 6}} Why must a set of integers contain $0$ to be closed under subtraction?
 %
 %
 %
-\clearpage%
+\cleardoublepage%
 %
 %
 %
@@ -245,32 +251,32 @@ PROBLEM: Prove that if $S$ and $T$ are sets of integers closed under subtraction
 %
 %
 %
-\clearpage%
+\cleardoublepage%
 %
 %
 %
 {\large \bf WORKSHEET ON RESIDUE CLASSES}\\[.25in]
 \addcontentsline{toc}{subsection}{Residue Classes}
-Congruence Modulo $m$ is an \underline{EQUIVALENCE RELATION} on $Z$, the set of all integers.\\[.25in]
+Congruence Modulo $m$ is an \underline{EQUIVALENCE RELATION} on $\mathbb{Z}$, the set of all integers.\\[.25in]
 \begin{tabular}{l@{\hspace{.05in}}l}
 R &$-$ REFLEXIVE: $a\equiv a(m)$\\
 S &$-$ SYMMETRIC: If $a\equiv b(m)$ then $b\equiv a(m)$\\
 T &$-$ TRANSITIVE: $a\equiv b(m)$ and $b\equiv c(m)$ then $a\equiv c(m)$
 \end{tabular}\\[.25in]
-The relation \textit{congruence} partitions $Z$ into disjoint \underline{EQUIVALENCE CLASSES} or \\
+The relation \textit{congruence} partitions $\mathbb{Z}$ into disjoint \underline{EQUIVALENCE CLASSES} or \\
 \underline{RESIDUE CLASSES}.\\[.25in]
-When $m=2$, $Z$ is partitioned into the classes $2Z$ and $1+2Z$.
+When $m=2$, $\mathbb{Z}$ is partitioned into the classes $2\mathbb{Z}$ and $1+2\mathbb{Z}$.
 \begin{equation*}\begin{split}
-2Z &= \{\dots, -4, -2, 0, 2, 4, \dots\}\\
-1+2Z &= \{\dots, -3, -1, 1, 3, 5, 7, \dots\}
+2\mathbb{Z} &= \{\dots, -4, -2, 0, 2, 4, \dots\}\\
+1+2\mathbb{Z} &= \{\dots, -3, -1, 1, 3, 5, 7, \dots\}
 \end{split}\end{equation*}\\[.2in]
-\underline{\bf{Task 1}} Explain why the classes $2Z$ and $1+2Z$ are disjoint.\\[2in]
+\underline{\bf{Task 1}} Explain why the classes $2\mathbb{Z}$ and $1+2\mathbb{Z}$ are disjoint.\\[2in]
 \underline{\bf{Task 2}} What the residue classes when $m=3$?  Are they disjoint?  Why?\\[1.5in]
 \underline{\bf{Task 3}}  When $m=4$?  Explain.
 %
 %
 %
-\clearpage%
+\cleardoublepage%
 %
 %
 %
@@ -331,9 +337,9 @@ $\oplus$&\;0\;&\;1\;&\;2\;&\;3\;&\;4\;&\;5\\
 5
 \end{tabular}
 %
-\clearpage%
+\cleardoublepage%
 %
-Let $Z_6=\{0,1,2,3,4,5\}$ be the six elements you used to make the 6 by 6 table in Task 2.  If you examine that addition table, you can see that each of the following subsets are closed under the binary operation $\oplus$.   The relationship among these subsets is shown in the diagram.\\[.2in]
+Let $\mathbb{Z}_6=\{0,1,2,3,4,5\}$ be the six elements you used to make the 6 by 6 table in Task 2.  If you examine that addition table, you can see that each of the following subsets are closed under the binary operation $\oplus$.   The relationship among these subsets is shown in the diagram.\\[.2in]
 \begin{minipage}{2in}\begin{equation*}\begin{split}
 A=&\{0\}\\[.1in]
 B=&\{0,3\}\\[.1in]
@@ -341,7 +347,7 @@ C=&\{0,2,4\}\\[.1in]
 D=&\{0,1,2,3,4,5\}
 \end{split}\end{equation*}\end{minipage}
 \hfill\begin{minipage}{2in} \input{page_8.pdf_tex}\end{minipage}\\[.2in]
-\underline{\bf{Task 3}} Make the $\oplus$ table for $Z_8=\{0,1,2,3,4,5,6,7\}$, list all the subsets closed under $\oplus$, and make a diagram as above.\\[.2in]
+\underline{\bf{Task 3}} Make the $\oplus$ table for $\mathbb{Z}_8=\{0,1,2,3,4,5,6,7\}$, list all the subsets closed under $\oplus$, and make a diagram as above.\\[.2in]
 \begin{tabular*}{10cm}{c|@{\hspace{.75cm}}c@{\hspace{.75cm}}c@{\hspace{.75cm}}c@{\hspace{.75cm}}c@{\hspace{.75cm}}c@{\hspace{.75cm}}c@{\hspace{.75cm}}c@{\hspace{.75cm}}c}
 $\oplus$&\;0\;&\;1\;&\;2\;&\;3\;&\;4\;&\;5\;&\;6&\;7\\
 \hline\\[-.1in]
@@ -366,11 +372,11 @@ $B=$\\[.2in]
 $C=$\\[.2in]
 $D=$
 \end{minipage}\\[1in]
-\underline{\bf{Task 4}} Without making the addition table, can you give all the closed subsets of $Z_{12}$?
+\underline{\bf{Task 4}} Without making the addition table, can you give all the closed subsets of $\mathbb{Z}_{12}$?
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -391,7 +397,7 @@ Now show how to use this latter element on $b\,a=c\,a$ and conclude that $b=c$.
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -434,7 +440,7 @@ $a^5=$
 \underline{\bf{Task 2}} If $\beta=$(26), $\beta^{-1}=$\\[.25in]
 \rule{.5in}{0in}What is the inverse of any transposition $(ab)$?\rule{2.25in}{.01in}
 %
-\clearpage
+\cleardoublepage
 %
 \underline{\bf{Task 3}} Let $\alpha$=(132)(4675).  What is the smallest positive integer $s$ so that\\[.5in]
 \rule{.75in}{0in}$\alpha^s$ = (1)?  $s$=\rule{2in}{.01in}.\\[.5in]
@@ -451,7 +457,7 @@ What is the order of $\gamma=(13)(234)$?\\ \vfill
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -471,7 +477,7 @@ Draw $\alpha$ and $\alpha^{-1}$ in your picture as vectors.  How are their angle
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -496,7 +502,7 @@ order $x$\\
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -532,7 +538,7 @@ $e$&$a$&$b$&$c$&$d$&$e$
 \end{tabular*}}%
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -549,7 +555,7 @@ $(1+i)(2-3i)=$
 (d) \begin{minipage}[t]{5in}What are the roots of $x^3-1=0$, $x^4-1=0$, and how is this question related to the above parts?\end{minipage}
 \end{minipage}
 %
-\clearpage
+\cleardoublepage
 %
 \underline{\bf{Task 3}} If $r$ and $s$ are roots of $x^2-7x+43=0$, what are $r+s$ and $rs$?\\[1in]
 \underline{\bf{Task 4}} \begin{minipage}[t]{6in}Use $(x-a)(x-b) = x^2-(a+b)x+ab$ to resolve Task 3.\\[1.25in]
@@ -564,7 +570,7 @@ Why is $r^2=s$?
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -609,7 +615,7 @@ Connect the points and describe the geometrical figure produced.\\[.2in]
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -636,7 +642,7 @@ $-s$
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -673,7 +679,7 @@ $-s$
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -698,7 +704,7 @@ $\displaystyle f_6=\frac{x}{x-1}$ &$\displaystyle\frac{x}{x-1}$
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -723,7 +729,7 @@ List all the subsets of $\{f_1, f_2,f_3, f_4,f_5,f_6\}$ that are closed under $\
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -742,7 +748,7 @@ $\phi(n)$ & 1 & 1 & 2 & 2 & 4 & 2 & 6 & 4 & 6 & 4 & 10
 \underline{\bf{Task 5}} Prove a formula for $\phi(p^n)$.\vfill
 \underline{\bf{Task 6}} Prove that $\phi(11^n)$ is a multiple of 10, for all $n$.\vfill
 \underline{\bf{Task 7}} Show that $\phi(16)\cdot\phi(9) =  \phi(16\cdot 9)$\vfill
-\clearpage
+\cleardoublepage
 \underline{\bf{Task 8}} Find all $x$ such that $\phi(x)=n$ where:\\[.1in]
 (a) $n$ =1 \hfill (b) $n$=2 \hfill (c) $n$=4 \hspace{2in} \vfill
 \underline{\bf{Task 9}} \begin{minipage}[t]{6in}The notation $(a,b)=1$ means that $a$ and $b$ are relatively prime.\\
@@ -754,28 +760,28 @@ Use this to compute $\phi(72)$; also compute $\phi(120)$.\end{minipage}\vfill
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
 {\large \bf WORKSHEET ON INVERTIBLES}\\[.25in]
 \addcontentsline{toc}{subsection}{Invertibles}
-Let $Z_m=\{\bar{0}$, $\bar{1}$, $\bar{2}$, $\bar{3}$, \dots, $\overline{m-1)}\}$ and $V_m$ be the set of invertibles of $Z_m$ consisting of those elements of $Z_m$ that have \textit{multiplicative} inverses.  For each $Z_m$ make a table of inverses of those elements that have multiplicative inverses and list $V_m$.  Here the ``bar" indicates an equivalence class.  $\bar{2}$ indicates the set of all integers in $Z$ whose remainder is 2 upon division by $m$.  Once understood, the ``bar'' is omitted.\\[.25in]
+Let $\mathbb{Z}_m=\{\bar{0}$, $\bar{1}$, $\bar{2}$, $\bar{3}$, \dots, $\overline{m-1)}\}$ and $V_m$ be the set of invertibles of $\mathbb{Z}_m$ consisting of those elements of $\mathbb{Z}_m$ that have \textit{multiplicative} inverses.  For each $\mathbb{Z}_m$ make a table of inverses of those elements that have multiplicative inverses and list $V_m$.  Here the ``bar" indicates an equivalence class.  $\bar{2}$ indicates the set of all integers in $\mathbb{Z}$ whose remainder is 2 upon division by $m$.  Once understood, the ``bar'' is omitted.\\[.25in]
 \underline{SAMPLE}:\\
 \begin{tabular}{l@{\hspace{.5in}}l@{\hspace{.5in}}l}
-$Z_3=\{0,1,2\}$ & \begin{tabular}{c|ccc}$x$&0&1&2\\ \hline\\[-.1in] $x^{-1}$ & & 1 & 2\end{tabular} & $V_3=\{1,2\}$\\[.75in]
+$\mathbb{Z}_3=\{0,1,2\}$ & \begin{tabular}{c|ccc}$x$&0&1&2\\ \hline\\[-.1in] $x^{-1}$ & & 1 & 2\end{tabular} & $V_3=\{1,2\}$\\[.75in]
 
-$Z_4=\{0,1,2,3\}$ & \begin{tabular}{c|cccc}$x$&0&1&2&3\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_4=\{\hspace{1in}\}$\\[.75in]
-$Z_5=\{0,1,2,3,4\}$ & \begin{tabular}{c|ccccc}$x$&0&1&2&3&4\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_5=\{\hspace{1in}\}$\\[.75in]
-$Z_6=\{0,1,2,3,4,5\}$ & \begin{tabular}{c|cccccc}$x$&0&1&2&3&4&5\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_6=\{\hspace{1in}\}$\\[.75in]
-$Z_7=\{0,1,2,3,4,5,6\}$ & \begin{tabular}{c|ccccccc}$x$&0&1&2&3&4&5&6\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_7=\{\hspace{1in}\}$\end{tabular}\\[.75in]
-Can you conjecture which elements of $Z_{30}$ are invertibles?\vfill
-How many invertibles does $Z_p$ have where $p$ is a prime?\vfill
+$\mathbb{Z}_4=\{0,1,2,3\}$ & \begin{tabular}{c|cccc}$x$&0&1&2&3\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_4=\{\hspace{1in}\}$\\[.75in]
+$\mathbb{Z}_5=\{0,1,2,3,4\}$ & \begin{tabular}{c|ccccc}$x$&0&1&2&3&4\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_5=\{\hspace{1in}\}$\\[.75in]
+$\mathbb{Z}_6=\{0,1,2,3,4,5\}$ & \begin{tabular}{c|cccccc}$x$&0&1&2&3&4&5\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_6=\{\hspace{1in}\}$\\[.75in]
+$\mathbb{Z}_7=\{0,1,2,3,4,5,6\}$ & \begin{tabular}{c|ccccccc}$x$&0&1&2&3&4&5&6\\ \hline\\[-.1in] $x^{-1}$ & &  & \end{tabular} & $V_7=\{\hspace{1in}\}$\end{tabular}\\[.75in]
+Can you conjecture which elements of $\mathbb{Z}_{30}$ are invertibles?\vfill
+How many invertibles does $\mathbb{Z}_p$ have where $p$ is a prime?\vfill
 How is the Euler $\phi$-function related to these questions?\vfill
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -802,7 +808,7 @@ $\theta(f) = f'$\\
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -825,7 +831,7 @@ $\theta(g)$
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -845,11 +851,11 @@ For each of the following groups, label $A$ if it is isomorphic to the cyclic gr
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
-{\large\bf WORKSHEET ON AN $8\times 8$ GROUP TABLE --  $Z_8$}\\[.25in]
+{\large\bf WORKSHEET ON AN $8\times 8$ GROUP TABLE --  $\mathbb{Z}_8$}\\[.25in]
 \addcontentsline{toc}{subsection}{Groups of Order 8}
 %
 \textbf{\underline{Task 1}} Fill in the following table where each of the 64 entries is found by addition modulo 8; i.e. add the two numbers, divide by 8, and record the remainder.\\[.5in]
@@ -883,11 +889,11 @@ $\begin{array}{c|cccccccc}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
-{\large\bfseries WORKSHEET ON AN $8\times 8$ GROUP TABLE -- $Z_2 \times Z_4$}\\[.25in]
+{\large\bfseries WORKSHEET ON AN $8\times 8$ GROUP TABLE -- $\mathbb{Z}_2 \times \mathbb{Z}_4$}\\[.25in]
 
 \textbf{\underline{Task 1}} Fill in the following table using bitwise addition mod 2 in the left-most slot and bitwise addition mod 4 in the right-most slot.\\[.5in]
 \begin{tabular}{c|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}|@{\hspace{.15in}}c@{\hspace{.15in}}}
@@ -919,11 +925,11 @@ $\begin{array}{c|cccccccc}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
-{\large\bfseries WORKSHEET ON AN $8\times 8$ GROUP TABLE -- $Z_2 \times Z_2 \times Z_2$}\\[.25in]
+{\large\bfseries WORKSHEET ON AN $8\times 8$ GROUP TABLE -- $\mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2$}\\[.25in]
 
 \textbf{\underline{Task 1}} Fill in the following table using \underline{bitwise addition mod 2}.\\[.5in]
 \begin{tabular}{c|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}|@{\hspace{.1in}}c@{\hspace{.1in}}}
@@ -955,7 +961,7 @@ $\begin{array}{c|cccccccc}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -993,7 +999,7 @@ $\begin{array}{c|cccccccc}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -1028,7 +1034,7 @@ $\begin{array}{c|cccccccc}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -1039,16 +1045,16 @@ Listed next are the elements of these five groups along with their names.  You a
 CYCLIC & $\{e, a, a^2, a^3, a^4, a^5, a^6,a^7\}$\\[.5in]
 QUATERNIONS & $\{ 1, -1, i, -i, j, -j, k, -k\}$\\[.5in]
 OCTIC & $\{ (1), \rho, \rho^2, \rho^3,\phi,\rho\phi,\rho^2\phi,\rho^3\phi\}$\\[.5in]
-\parbox{1.5in}{BIT STRINGS\\or $Z_2\times Z_2\times Z_2$} & $\{000, 001,010,011,100,101,110,111\}$\\[.5in]
-$Z_2\times Z_4$ & $\{00,01,02,03,10,11,12,13\}$
+\parbox{1.5in}{BIT STRINGS\\or $\mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2$} & $\{000, 001,010,011,100,101,110,111\}$\\[.5in]
+$\mathbb{Z}_2\times \mathbb{Z}_4$ & $\{00,01,02,03,10,11,12,13\}$
 \end{tabular}\\[.5in]
 \underline{\bf{Task 1}} Give two reasons why the QUATERNIONS are \underline{not} isomorphic to the OCTIC group.\\ \vfill
-\underline{\bf{Task 2}} Why is $Z_2 \times Z_4$ not isomorphic to $Z_2\times Z_2\times Z_2$?\\ \vfill
+\underline{\bf{Task 2}} Why is $\mathbb{Z}_2 \times \mathbb{Z}_4$ not isomorphic to $\mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2$?\\ \vfill
 \underline{\bf{Task 3}} Why is the CYCLIC group not isomorphic to any of the other four?\vfill
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -1068,40 +1074,40 @@ $f_4$\\[.25in]
 $f_5$\\[.25in]
 $f_6$\\
 \end{tabular}\\[.75in]
-Display an isomorphism between this group and either $S_3$ or $Z_6$.
+Display an isomorphism between this group and either $S_3$ or $\mathbb{Z}_6$.
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
 {\large \bf 	FUNDAMENTAL THEOREM OF FINITE ABELIAN GROUPS}\\[.25in]%
 \addcontentsline{toc}{subsection}{Fundamental Theorem} %
 \underline{THEOREM:} \parbox[t]{5in}{Every finite abelian group can be written as a product of cyclic groups of prime power order.}\\[.25in]
-\rule{.06in}{0in}\underline{EXAMPLES:} \parbox[t]{5in}{The Klein 4--Group is $Z_2\times Z_2$; the cyclic group of order 4 is $Z_4$.  The abelian group of order 6 is $Z_6$ which is isomorphic to the direct product $Z_2 \times Z_3$.}\\[.25in]
+\rule{.06in}{0in}\underline{EXAMPLES:} \parbox[t]{5in}{The Klein 4--Group is $\mathbb{Z}_2\times \mathbb{Z}_2$; the cyclic group of order 4 is $\mathbb{Z}_4$.  The abelian group of order 6 is $\mathbb{Z}_6$ which is isomorphic to the direct product $\mathbb{Z}_2 \times \mathbb{Z}_3$.}\\[.25in]
 Let $G=\{1, 8, 12, 14, 18, 21, 27, 31, 34, 38, 44, 47, 51, 53, 57, 64\}$ be a group of order 16 under multiplication mod 65.  $G$ is isomorphic to one of:\\[.25in]
-\parbox{3in}{\rule{.5in}{0in}$Z_{16}$\\
-\rule{.35in}{0in}$Z_2 \times Z_8$\\
-\rule{.35in}{0in}$Z_4 \times Z_4$\\
-\rule{.2in}{0in}$Z_2 \times Z_2 \times Z_4$\\
-$Z_2 \times Z_2 \times Z_2 \times Z_2$}%
+\parbox{3in}{\rule{.5in}{0in}$\mathbb{Z}_{16}$\\
+\rule{.35in}{0in}$\mathbb{Z}_2 \times \mathbb{Z}_8$\\
+\rule{.35in}{0in}$\mathbb{Z}_4 \times \mathbb{Z}_4$\\
+\rule{.2in}{0in}$\mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_4$\\
+$\mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2 \times \mathbb{Z}_2$}%
 \parbox{3in}{BUT WHICH ONE?\\[.25in] LOOK AT ORDERS!}\\[.25in]
 \begin{tabular}{l|ccccccccccccccccc}
 $x$ & 1 & 8 & 12 & 14 & 18 & 21 & 27 & 31 & 34 & 38 & 44 & 47 & 51 & 53 & 57 & 64\\
 \hline\\[-.1in]
 order $x$ & 1 & 4 & 4 & 2 & & 4 & 4 & & & 4& 4 & 4 & & 4 & 4&
 \end{tabular}\\[.25in]
-\underline{\bf{Task 1}} Why is $G$ not $Z_{16}$?\vfill
-\underline{\bf{Task 2}} Why is $G$ not $Z_2 \times Z_8$?\vfill
-\underline{\bf{Task 3}} What are the orders of elements in $Z_2\times Z_2\times Z_2\times Z_2$?\vfill
+\underline{\bf{Task 1}} Why is $G$ not $\mathbb{Z}_{16}$?\vfill
+\underline{\bf{Task 2}} Why is $G$ not $\mathbb{Z}_2 \times \mathbb{Z}_8$?\vfill
+\underline{\bf{Task 3}} What are the orders of elements in $\mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2$?\vfill
 \underline{\bf{Task 4}} Which one must $G$ be?\vfill
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
-\underline{\bf{Task 5}} $G =\{1, 9, 16, 22, 29, 53, 74, 79, 81\}$ is a  group of order 9 under multiplication modulo\\[.2in] 91.  Is $G$ isomorphic to $Z_9$ or $Z_3 \times Z_3$?  Why are these the only two possibilities?\\[.2in]
+\underline{\bf{Task 5}} $G =\{1, 9, 16, 22, 29, 53, 74, 79, 81\}$ is a  group of order 9 under multiplication modulo\\[.2in] 91.  Is $G$ isomorphic to $\mathbb{Z}_9$ or $\mathbb{Z}_3 \times \mathbb{Z}_3$?  Why are these the only two possibilities?\\[.2in]
 Make the table of orders and inverses.\\[.25in]
 \begin{tabular}{l|c@{\hspace{.5in}}c@{\hspace{.5in}}c@{\hspace{.5in}}c@{\hspace{.5in}}c@{\hspace{.5in}}c@{\hspace{.5in}}c@{\hspace{.5in}}c@{\hspace{.5in}}c}
 $x$ & 1 & 9 & 16 & 22 & 29 & 53 & 74 & 79 & 81\\
@@ -1119,15 +1125,15 @@ B.  List the six direct product possibilities}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
 {\large \bf 	WHICH DIRECT PRODUCT?}\\[.25in]
 \addcontentsline{toc}{subsection}{Which Direct Product}
 $V_{45}=\{1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19, 22, 23, 26, 28, 29, 31, 32, 34, 37, 38, 41, 43, 44\}$ is a multiplicative group, using mod 45, of order 24. According to the fundamental theorem of finite abelian groups, $V_{45}$ is isomorphic to a direct product of cyclic groups, each having prime power order. The possibilities are:
-$$ Z_3 \times Z_8 \qquad Z_2 \times Z_3 \times Z_4 \qquad Z_2\times Z_2\times Z_2 \times Z_3 $$
-You do not include $Z_{24}$, $Z_6 \times Z_4$ or $Z_2 \times Z_{12}$ since the orders are not prime power.  Also notice that the cyclic group $Z_{24}$ is, in fact, $Z_3 \times Z_8$ which has (1, 1) as a generator.\\[.25in]
+$$ \mathbb{Z}_3 \times \mathbb{Z}_8 \qquad \mathbb{Z}_2 \times \mathbb{Z}_3 \times \mathbb{Z}_4 \qquad \mathbb{Z}_2\times \mathbb{Z}_2\times \mathbb{Z}_2 \times \mathbb{Z}_3 $$
+You do not include $\mathbb{Z}_{24}$, $\mathbb{Z}_6 \times \mathbb{Z}_4$ or $\mathbb{Z}_2 \times \mathbb{Z}_{12}$ since the orders are not prime power.  Also notice that the cyclic group $\mathbb{Z}_{24}$ is, in fact, $\mathbb{Z}_3 \times \mathbb{Z}_8$ which has (1, 1) as a generator.\\[.25in]
 One way of determining which of these three is isomorphic to $V_{45}$ is by computing the orders of each element in $V_{45}$ and comparing with orders of elements in the direct products. By hand, this is not an easy feat.\\
 \centerline{\fbox{\parbox{1.4in}{USING THE TI-92}}}
 Clear home screen -- F1, 8\\
@@ -1155,29 +1161,29 @@ order $x$ & &&&&&&&&&& 12 & 2
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
 {\large \bf 	RINGS THAT ARE NOT INTEGRAL DOMAINS}\\[.25in]
 \addcontentsline{toc}{subsection}{Rings, But Not I.D.}
 A commutative ring $D$ with unity 1, having no zero-divisors is called an integral domain.\\[.25in]
-\underline{\bf{Task 1}} Explain why $Z_{10}$ is not an integral domain.\\ \vfill
-\underline{\bf{Task 2}} Why is $Z_{12}$ not?\\ \vfill
-\underline{\bf{Task 3}} For which $m$ is $Z_m$ not an integral domain?\\ \vfill
-\underline{\bf{Task 4}} Is $Z_2 \times Z_2$ an integral domain?\\ \vfill
+\underline{\bf{Task 1}} Explain why $\mathbb{Z}_{10}$ is not an integral domain.\\ \vfill
+\underline{\bf{Task 2}} Why is $\mathbb{Z}_{12}$ not?\\ \vfill
+\underline{\bf{Task 3}} For which $m$ is $\mathbb{Z}_m$ not an integral domain?\\ \vfill
+\underline{\bf{Task 4}} Is $\mathbb{Z}_2 \times \mathbb{Z}_2$ an integral domain?\\ \vfill
 \underline{\bf{Task 5}} Let $A$ and $B$ be integral domains.  Is $A\times B$ an integral domain?\\ \vfill
 \underline{\bf{Task 6}} Is the set of all $2\times 2$ matrices with real entries with the usual addition an multiplication of matrices an integral domain?\\ \vfill
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
-{\large \bf 	WORKSHEET ON POLYNOMIALS IN $Z_n[x]$}\\[.25in]
-\addcontentsline{toc}{subsection}{Polynomials in $Z_n[x]$}
-\underline{\bf{Task 1}} Tabulate each of $(x+\bar{2})(x+\bar{5})$ and $x(x+\bar{7})$ in $Z_{10}$ and thus show that they are equal.\\[.25in]
+{\large \bf 	WORKSHEET ON POLYNOMIALS IN $\mathbb{Z}_n[x]$}\\[.25in]
+\addcontentsline{toc}{subsection}{Polynomials in $\mathbb{Z}_n[x]$}
+\underline{\bf{Task 1}} Tabulate each of $(x+\bar{2})(x+\bar{5})$ and $x(x+\bar{7})$ in $\mathbb{Z}_{10}$ and thus show that they are equal.\\[.25in]
 \begin{tabular}{c|@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c@{\hspace{.4in}}c}
 $x$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
 \hline \\
@@ -1185,25 +1191,25 @@ $(x+\bar2)(x+\bar5)$ & & & 8\\[.2in]
 \hline\\
 $x(x+\bar7)$ &&& 8\\[.2in]
 \end{tabular} \\[1in]
-\underline{\bf{Task 2}} Show that $(x+\bar{3})(x+\bar{5}) = x(x+\bar{8})$ in $Z_{15}[x]$.\\ \vfill
-\underline{\bf{Task 3}} Show that $(x+\bar{6})^2 = x^2$ in $Z_{12}[x]$.\\ \vfill
+\underline{\bf{Task 2}} Show that $(x+\bar{3})(x+\bar{5}) = x(x+\bar{8})$ in $\mathbb{Z}_{15}[x]$.\\ \vfill
+\underline{\bf{Task 3}} Show that $(x+\bar{6})^2 = x^2$ in $\mathbb{Z}_{12}[x]$.\\ \vfill
 \underline{\bf{Task 4}} \parbox[t]{5in}{Our experience leads us to expect that deg $\alpha\beta$ = deg $\alpha$ + deg $\beta$\\[.2in] for polynomials $\alpha$ and $\beta$.\\[.2in]
-But ... Show that $(\bar{2}x+\bar{1})(\bar{3}x+\bar{5})=x+\bar{5}$ in $Z_6[x]$.}\\ \vfill
+But ... Show that $(\bar{2}x+\bar{1})(\bar{3}x+\bar{5})=x+\bar{5}$ in $\mathbb{Z}_6[x]$.}\\ \vfill
 %
 %
-\clearpage%
+\cleardoublepage%
 %
 %
-\underline{\bf{Task 5}} \parbox[t]{5in}{Show that in $Z_6[x]$\\[.2in]
+\underline{\bf{Task 5}} \parbox[t]{5in}{Show that in $\mathbb{Z}_6[x]$\\[.2in]
 $(\bar{2}x+\bar{5})(\bar{3}x+\bar{2}) = (x+\bar{4})$\\[1.25in]
 $(\bar{3}x+\bar{3})(\bar{4}x^2+\bar{2}) = \bar{0}$\\[1.25in]}\\
-\underline{\bf{Task 6}} \parbox[t]{5.5in}{In $Z_5[x], (\bar{2}x+\bar{1})(\bar{4}x+\bar{3})=(x+\bar{3})(\bar{3}x+\bar{1})$\\[1.5in]
+\underline{\bf{Task 6}} \parbox[t]{5.5in}{In $\mathbb{Z}_5[x], (\bar{2}x+\bar{1})(\bar{4}x+\bar{3})=(x+\bar{3})(\bar{3}x+\bar{1})$\\[1.5in]
 Make these linear factors monic (leading coefficient is $\bar{1}$) by factoring out $\bar 2, \bar 4$,\\[.2in] and $\bar 3$.  For example $(\bar2 x+\bar 1)=\bar 2(x+\bar 3)$.  Then both sides become\\[.25in]
 \rule{1.75in}{.01in}.}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -1212,7 +1218,7 @@ Make these linear factors monic (leading coefficient is $\bar{1}$) by factoring 
 Define``addition'' and ``multiplication'' as follows:
 $$ a\oplus b = a+b-1 $$
 $$ a\otimes b = a+b-ab$$
-show that $(Z,\oplus, \otimes)$ is a ring by doing the following:\\[.25in]
+show that $(\mathbb{Z},\oplus, \otimes)$ is a ring by doing the following:\\[.25in]
 \underline{\bf{Task 1}} Determine the ``0'', the additive identity.  Is there a unity?\\ \vfill
 \underline{\bf{Task 2}} What is the additive inverse of $a$?  Why?\\ \vfill
 \underline{\bf{Task 3}} Is $\oplus$ associative?  Is $\otimes$ associative?\\ \vfill
@@ -1220,7 +1226,7 @@ show that $(Z,\oplus, \otimes)$ is a ring by doing the following:\\[.25in]
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
@@ -1230,27 +1236,27 @@ show that $(Z,\oplus, \otimes)$ is a ring by doing the following:\\[.25in]
 Ring & Form of Element & Unity & Abelian & Integral Domain & Field\\
 \hline
 &&&&\\[-.1in]
-$Z$ & $k$ & 1 & Yes & Yes & No\\[.5in]
-$Z_n$, $n$ composite &&&&\\[.5in]
-$Z_p$, $p$ prime &&&&\\[.5in]
-$Z[x]$ &&&&\\[.5in]
-$nZ, \; n>1$ &&&&\\[.5in]
-$M(Z)$, 2$\times$2 matrices &&&&\\[.5in]
-$Z[i]$ &&&&\\[.5in]
-$Z_3[i]$ &&&&\\[.5in]
-$Z_2[i]$ &&&&\\[.5in]
-$Z[\sqrt{2}] $&&&&\\[.5in]
-$Q[\sqrt{2}]$ & $a+b\sqrt{2}$ &&&\\[.5in]
-$Z\oplus Z$ &&&&
+$\mathbb{Z}$ & $k$ & 1 & Yes & Yes & No\\[.5in]
+$\mathbb{Z}_n$, $n$ composite &&&&\\[.5in]
+$\mathbb{Z}_p$, $p$ prime &&&&\\[.5in]
+$\mathbb{Z}[x]$ &&&&\\[.5in]
+$n\mathbb{Z}, \; n>1$ &&&&\\[.5in]
+$M(\mathbb{Z})$, 2$\times$2 matrices &&&&\\[.5in]
+$\mathbb{Z}[i]$ &&&&\\[.5in]
+$\mathbb{Z}_3[i]$ &&&&\\[.5in]
+$\mathbb{Z}_2[i]$ &&&&\\[.5in]
+$\mathbb{Z}[\sqrt{2}] $&&&&\\[.5in]
+$\mathbb{Q}[\sqrt{2}]$ & $a+b\sqrt{2}$ &&&\\[.5in]
+$\mathbb{Z}\oplus \mathbb{Z}$ &&&&
 \end{tabular}
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
-{\large \bf 	$Z_3[i]$ IS A FIELD WITH 9 ELEMENTS}\\[.25in]
+{\large \bf 	$\mathbb{Z}_3[i]$ IS A FIELD WITH 9 ELEMENTS}\\[.25in]
 \addcontentsline{toc}{subsection}{A Field With 9 Elements}
 This field consists of all elements of the form $m+ni$ where $m$ and $n$ are in \{0,1,2\}.  The multiplication table is:\\[.25in]
 \begin{tabular}{c|@{\hspace{.3in}}c@{\hspace{.3in}}c@{\hspace{.3in}}c@{\hspace{.3in}}c@{\hspace{.3in}}c@{\hspace{.3in}}c@{\hspace{.3in}}c@{\hspace{.3in}}c}
@@ -1277,13 +1283,13 @@ order of $x$ &
 %
 %
 %
-\clearpage
+\cleardoublepage
 %
 %
 %
 {\large \bf 	APPLICATION OF A FAMOUS THEOREM}\\[.25in]
 \addcontentsline{toc}{subsection}{Application of a Famous Theorem}
-\underline{PROBLEM:} \parbox[t]{5.5in}{Explain why $x^7 -x = x(x-1)(x-2)(x-3)(x-4)(x-5)(x-6)$ in $Z_7[x]$.\\[.25in]
+\underline{PROBLEM:} \parbox[t]{5.5in}{Explain why $x^7 -x = x(x-1)(x-2)(x-3)(x-4)(x-5)(x-6)$ in $\mathbb{Z}_7[x]$.\\[.25in]
 There are a number of ways of approaching this problem, several motivated by a similar question you couild ask in the $8^\text{th}$ grade.  Explain why $x^2-5x+6=(x-2)(x-3)$.  The following tasks guide you through three solutions.}\\[.25in]
 \underline{\bf{Task 1}} Use a calculator and show that each of 1, 2, 3, 4, 5, 6 satisfies $x^7-x=0$; then use the factor theorem.\\ \vfill
 \underline{\bf{Task 2}} Simplify the right hand side algebraically using $x-6=x+1,\, x-5=x+2,\,\\ x-4=x+3$.\\ \vfill

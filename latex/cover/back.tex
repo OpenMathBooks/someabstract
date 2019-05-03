@@ -6,10 +6,11 @@
 \usepackage{mdframed}
 \usepackage[papersize={8.5in,11in}, hmargin={1in, 2in}, top=.25in, textheight=10in]{geometry}
 
-\definecolor{bg}{HTML}{DBA639}
-\definecolor{txt}{HTML}{252D49}
-\definecolor{ltxt}{HTML}{B4B07C}
-\definecolor{boxbg}{HTML}{38544C}
+\definecolor{bg}{HTML}{DCD0C0}
+\definecolor{txt}{HTML}{333333}
+\definecolor{ltxt}{HTML}{F4F4F4}
+\definecolor{boxbg}{HTML}{333333}
+\definecolor{spine}{HTML}{91a191}
 \pagecolor{bg}
 
 \usepackage[T1]{fontenc}
@@ -38,7 +39,7 @@
 \tikz[remember picture, overlay]{
 \draw[fill, boxbg, thick] (current page.north east) rectangle +(-8.5in, -1.25in);
 % \draw[fill, boxbg, thick] (current page.north west) rectangle +(8.5in, -.75in);
-\draw[fill, txt, thick] (current page.north east) rectangle +(-1in, -11in);
+\draw[fill, spine, thick] (current page.north east) rectangle +(-1in, -11in);
 }
 
 % \begin{center}
@@ -95,7 +96,7 @@ This book is rebound under an open source license and is available\\ in electron
 	\color{txt}
 	% \resizebox{.25\linewidth}{!}{\textit{Open Math Books}}
 	% \resizebox{.25\linewidth}{!}{$\mathbb{O}\mathrm{p}\mathrm{e}\mathrm{n}$ $\mathbb{M}\mathrm{a}\mathrm{t}\mathrm{h}$ $\mathbb{B}\infty\mathrm{k}\mathrm{s}$}
-	\resizebox{.35\linewidth}{!}{$\mathbb{O}\mathrm{p}\mathrm{e}\mathrm{n}$ $\mathbb{M}\mathrm{a}\mathrm{t}\mathrm{h}$ $\mathbb{B}\mathrm{oo}\mathrm{k}\mathrm{s}$}
+	\resizebox{.2\linewidth}{!}{$\mathbb{O}\mathrm{p}\mathrm{e}\mathrm{n}$ $\mathbb{M}\mathrm{a}\mathrm{t}\mathrm{h}$ $\mathbb{B}\mathrm{oo}\mathrm{k}\mathrm{s}$}
 	% \resizebox{.25\linewidth}{!}{$\mathbb{O}{p}{e}{n}$ $\mathbb{M}{a}{t}{h}$ $\mathbb{B}\infty{k}{s}$}
 \end{flushleft}
 \clearpage

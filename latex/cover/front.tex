@@ -1,21 +1,3 @@
-% \def\course{Math 228}
-%
-%
-%
-%
-% \title{Discrete Mathematics: An Open Introduction}
-% %{\large Course Notes for Math 228 at the University of Northern Colorado}
-%
-%
-%
-%
-% \author{Oscar Levin}
-%
-% \date{Fall 2015}
-%
-% \begin{titlingpage*}
-
-
 
 \documentclass[10pt]{article}
 
@@ -25,11 +7,18 @@
 \usepackage{tikz}
 \usepackage{mdframed}
 \usepackage[papersize={8.5in,11in}, hmargin={1.5in, .5in}, textheight=10.5in]{geometry}
-
-\definecolor{bg}{HTML}{DBA639}
-\definecolor{txt}{HTML}{252D49}
-\definecolor{ltxt}{HTML}{B4B07C}
-\definecolor{boxbg}{HTML}{38544C}
+% Number 3:
+\definecolor{bg}{HTML}{DCD0C0}
+\definecolor{txt}{HTML}{333333}
+\definecolor{ltxt}{HTML}{F4F4F4}
+\definecolor{boxbg}{HTML}{333333}
+\definecolor{spine}{HTML}{91a191}
+% Number 9:
+% \definecolor{bg}{HTML}{D7CEC7}
+% \definecolor{txt}{HTML}{000000}
+% \definecolor{ltxt}{HTML}{D7CEC7}
+% \definecolor{boxbg}{HTML}{454545}
+% \definecolor{spine}{HTML}{76323F}
 \pagecolor{bg}
 
 \usepackage[T1]{fontenc}
@@ -60,8 +49,10 @@
 % ~
 \tikz[remember picture, overlay]{
 \draw[fill, boxbg, thick] (current page.south east) rectangle +(-8.5in, 3in);
+\draw[line width=10pt, ltxt] (current page.south east) +(0, 3in) -- +(-8.5in, 3in);
 % \draw[fill, boxbg, thick] (current page.north west) rectangle +(8.5in, -.75in);
-\draw[fill, txt, thick] (current page.north west) rectangle +(1in, -11in);
+\draw[fill, spine, thick] (current page.north west) rectangle +(1in, -11in);
+\draw[line width=10pt, ltxt] (current page.north west) +(1in,0) -- +(1in, -11in);
 }
 
 ~
@@ -69,7 +60,7 @@
 
 \begin{center}
 
-\resizebox{.8\linewidth}{!}{\textbf{\scshape Some Abstract Algebra}}
+\resizebox{.9\linewidth}{!}{\textbf{\scshape Some Abstract Algebra}}
 
 \vskip 1in
 
@@ -86,15 +77,15 @@
 	\coordinate (h1) at (-3,2);
 	\coordinate (h0) at (0,3);
 
-	\draw[color=boxbg, very thick] (h0) -- (h1) -- (h4) -- (h9) -- (h8) -- (h3) -- (h0) -- (h2) -- (h6) -- (h9) -- (h5) -- (h1) -- (h6) -- (h3) -- (h7) -- (h9);
+	\draw[color=black, very thick] (h0) -- (h1) -- (h4) -- (h9) -- (h8) -- (h3) -- (h0) -- (h2) -- (h6) -- (h9) -- (h5) -- (h1) -- (h6) -- (h3) -- (h7) -- (h9);
 	\foreach \i in {0,...,9}{
-	\draw[fill=boxbg, color=boxbg] (h\i) circle (2.5pt);
+	\draw[fill=black, color=black] (h\i) circle (2.5pt);
 	}
 \end{tikzpicture}
 
 \vskip .75in
 
-\resizebox{.65\linewidth}{!}{\scshape A Primer and Interactive Workbook}
+\resizebox{.75\linewidth}{!}{\scshape A Primer and Interactive Workbook}
 
 \vskip 2in
 \vskip 1in
@@ -103,7 +94,7 @@
 
 \begin{center}
 \color{ltxt}
-\resizebox{.8\linewidth}{!}{\scshape Richard Grassl \quad - \quad Tabitha Mingus}
+\resizebox{.85\linewidth}{!}{\bfseries\scshape Richard Grassl ~~~ - ~~~ Tabitha Mingus}
 \end{center}
 % \vskip 1.1in
 %
